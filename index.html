@@ -13,6 +13,15 @@
   <title>G.Sweet | Artista Urbano</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
+    /* Fuente personalizada Street Flow NYC */
+    /* Fuente personalizada Urban Heroes */
+@font-face {
+  font-family: 'Urban Heroes';
+  src: url('https://github.com/FerProducer/GSWEET/raw/main/Urban%20Heroes.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
     :root {
       --color-bg: #000;
       --color-text: #fff;
@@ -65,9 +74,11 @@
       padding: 2rem;
     }
     .hero h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      color: var(--color-accent);
+  font-family: 'Urban Heroes', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-accent);
+}
     }
     .hero p { font-size: 1.2rem; margin: 1rem 0; }
     .cta-buttons button {
@@ -197,6 +208,7 @@ Debutando hoy su sonido firma con su EP: “DESDE QUE SALÍ” desde el municipi
   <section id="music">
     <h2>Últimos Lanzamientos</h2>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1QmccK9LFq8FRlOk2BLqTv?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" loading="lazy"></iframe>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5gpXfYeAHEQHLYJhqQrLU6?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     <div style="text-align:center; margin-top:1rem;">
       <a href="https://open.spotify.com/artist/2RCTRUgPYibrUqCcu94Zjn?si=kU4R6aG8T2uFTql9WS7hwQ" target="_blank" style="color: var(--color-accent); font-weight: bold;">Escucha ahora</a>
     </div>
@@ -286,3 +298,4 @@ document.getElementById("bookingForm").addEventListener("submit", function(e){
 </script>
 </body>
 </html>
+
