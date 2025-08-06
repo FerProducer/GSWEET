@@ -159,7 +159,9 @@
 <body>
   <!-- HEADER -->
   <header>
-    <img src="https://github.com/FerProducer/GSWEET/blob/main/IMG_0431.png%20Cercana.png?raw=true" alt="Logo G.Sweet">
+   <a href="#" class="logo-scroll">
+  <img src="https://raw.githubusercontent.com/FerProducer/GSWEET/refs/heads/main/IMG_0431.PNG" alt="Logo G.Sweet">
+</a>
     <nav>
       <a href="#bio">Biografía</a>
       <a href="#contact">Contacto</a>
@@ -296,5 +298,12 @@ document.getElementById("bookingForm").addEventListener("submit", function(e){
     .catch(error => alert("Error al enviar: " + error));
 });
 </script>
+<script>
+  document.querySelector('.logo-scroll').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
 </body>
 </html>
