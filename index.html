@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="G.Sweet - Artista de música urbana. Contrataciones, lanzamientos, press kit oficial y fechas de conciertos." />
+  <meta name="keywords" content="G.Sweet, música urbana, rap, reggaeton, conciertos, artista, booking" />
+  <meta name="author" content="G.Sweet" />
+  <meta property="og:title" content="G.Sweet | Artista Urbano" />
+  <meta property="og:description" content="El nuevo sonido de la calle. Conoce a G.Sweet: música, videos, press kit y fechas de conciertos." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/FerProducer/GSWEET/refs/heads/main/405508079_314022211446750_7254815610928447008_n.jpg" />
+  <meta property="og:type" content="website" />
+  <title>G.Sweet | Artista Urbano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #000;
+      --color-text: #fff;
+      --color-accent: #d4af37; /* Dorado */
+      --color-neon: #a020f0; /* Morado neón */
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+    }
+    header img { height: 75px; }
+    nav a {
+      color: var(--color-text);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: var(--color-accent); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex; justify-content: center; align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero video, .hero img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+    .hero-content {
+      max-width: 800px;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--color-accent);
+    }
+    .hero p { font-size: 1.2rem; margin: 1rem 0; }
+    .cta-buttons button {
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .cta-buttons button.listen { background: var(--color-accent); color: #000; }
+    .cta-buttons button.book { background: var(--color-neon); color: #fff; }
+    .cta-buttons button.press { background: transparent; color: var(--color-text); border: 2px solid var(--color-accent); }
+    .cta-buttons button:hover { transform: scale(1.05); }
+
+    /* SECCIONES */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--color-accent);
+    }
+    .bio { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
+    .bio img { width: 300px; border-radius: 10px; }
+    .bio-text { flex: 1; }
+
+    /* GALERÍA */
+    .gallery, .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .gallery img, .videos iframe { width: 100%; border-radius: 10px; }
+
+    /* FORMULARIO BOOKING */
+    form {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      background: var(--color-accent);
+      color: #000;
+      font-weight: bold;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover { background: var(--color-neon); color: #fff; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .bio { flex-direction: column; text-align: center; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="https://raw.githubusercontent.com/FerProducer/GSWEET/refs/heads/main/IMG_0431.PNG" alt="Logo G.Sweet">
+    <nav>
+      <a href="#bio">Biografía</a>
+      <a href="#music">Lanzamientos</a>
+      <a href="#gallery">Galería</a>
+      <a href="#videos">Videos</a>
+      <a href="#press">Prensa</a>
+      <a href="#events">Eventos</a>
+      <a href="#booking">Booking</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="https://github.com/FerProducer/GSWEET/raw/refs/heads/main/G.Sweet%20%E2%80%A2%20THE%20OTHERSIDE%20(One%20Take%20Freestyle)%20-%20G.%20Sweet%20(720p,%20h264)%20(online-video-cutter.com).mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>G.Sweet</h1>
+      <p>El nuevo sonido de la calle</p>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section id="bio">
+    <h2>Biografía</h2>
+    <div class="bio">
+      <img src="https://raw.githubusercontent.com/FerProducer/GSWEET/refs/heads/main/405508079_314022211446750_7254815610928447008_n.jpg" alt="G.Sweet">
+      <div class="bio-text">
+        <p>G.Sweet Es un proyecto melomano nacido en Nueva Orleans, Louisiana, un fenomeno fanático de la escritura y versátil, capaz de adaptarse a cualquier ritmo urbano gracias a sus inicios en el mundo competitivo del freestyle desde sus cortos 17 años de edad.
+
+Con inspiraciones tanto de nuevas generaciones como oldschool, abarcando géneros como R&B, Reggaetón, Dancehall, Rap, Trap, Drill, plugg, Corridos tumbados, pop, detroit, New Wave, entre otros...
+
+Ha sido participe en colaboraciones internacionales como ¡Hola! en colaboración con Mila D de Ucrania y Dorian Music de México.
+
+Participó en eventos masivos como el “Kite Festival México” en el gimnasio “Tricentenario” dada la pelea de box de Marco “El Dorado Reyes”.
+
+También como invitado especial y telonero de artistas Mexicanos ya consolidados y en 2 eventos televisados de recaudación para fundaciones como “Radio Teletón” y “Sueños y sonrisas” de fundación vida.
+
+Debutando hoy su sonido firma con su EP: “DESDE QUE SALÍ” desde el municipio de Delicias, Chihuahua, México. 🥷🏿🇲🇽</p>
+        <a href="URL_PRESSKIT_PDF" download style="color: var(--color-accent); font-weight: bold;">Descargar Press Kit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANZAMIENTOS -->
+  <section id="music">
+    <h2>Últimos Lanzamientos</h2>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1QmccK9LFq8FRlOk2BLqTv?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" loading="lazy"></iframe>
+    <div style="text-align:center; margin-top:1rem;">
+      <a href="https://open.spotify.com/artist/2RCTRUgPYibrUqCcu94Zjn?si=kU4R6aG8T2uFTql9WS7hwQ" target="_blank" style="color: var(--color-accent); font-weight: bold;">Escucha ahora</a>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="gallery">
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="https://raw.githubusercontent.com/FerProducer/GSWEET/refs/heads/main/508637394_687012607481040_8004079595667875219_n.jpg" alt="">
+      <img src="https://raw.githubusercontent.com/FerProducer/GSWEET/refs/heads/main/528034955_725208516994782_3512672529923663929_n.jpg" alt="">
+      <img src="https://raw.githubusercontent.com/FerProducer/GSWEET/refs/heads/main/505427164_18521073304042375_7796001516044434255_n.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos">
+    <h2>Videos Destacados</h2>
+    <div class="videos">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/OO4fhxl8xwU?si=L-3wIIzLcbQsSpC2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/h-i-EV2QslE?si=7IMv4Y79sJrFsEM9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- PRENSA -->
+  <section id="press">
+    <h2>Prensa y Logros</h2>
+    <p style="text-align:center;">Apareció en medios como: <img src="https://www.codigotres.com/images/logo.bco.png" alt="Medio" style="height:30px;"> <img src="https://tvazteca.brightspotcdn.com/dims4/default/a1fc636/2147483647/strip/true/crop/394x92+0+0/resize/197x46!/format/webp/quality/90/?url=http%3A%2F%2Ftv-azteca-brightspot.s3.amazonaws.com%2F84%2F6c%2Fcde3ad04432cbccd772588a79542%2F1.%20LogoTVASitioOK.png" alt="Medio" style="height:30px;"></p>
+    <ul style="margin-top:1rem; list-style:none; text-align:center;">
+      <li>🏆 Premio Mejor Artista Urbano 2024</li>
+      <li>🎤 Colaboraciones con artistas internacionales</li>
+    </ul>
+  </section>
+
+ 
+
+  <!-- BOOKING -->
+  <section id="booking">
+    <h2>Formulario de Booking</h2>
+    <form id="booking-form">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="correo" placeholder="Correo" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <input type="text" name="ciudad" placeholder="Ciudad" required>
+      <select name="evento">
+        <option value="">Tipo de evento</option>
+        <option>Concierto</option>
+        <option>Festival</option>
+        <option>Privado</option>
+      </select>
+      <textarea name="mensaje" rows="5" placeholder="Mensaje"></textarea>
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p style="text-align:center;">📧 carlogiovannigutierrezhinojos@gmail.com | 📱 WhatsApp: +52 614-510-3678</p>
+    <div style="text-align:center; margin-top:1rem;">
+      <a href="https://www.instagram.com/_g_sweet__?igsh=MTd0NmR0YTByZXQ5Zg%3D%3D&utm_source=qr" style="color:var(--color-accent); margin:0 1rem;">Instagram</a>
+      <a href="https://youtube.com/@g_sweet__?si=qZxP2tNkOFj6lhDo" style="color:var(--color-accent); margin:0 1rem;">YouTube</a>
+      <a href="https://www.tiktok.com/@_g_sweet__?_t=ZS-8ydfS6TjRAL&_r=1" style="color:var(--color-accent); margin:0 1rem;">TikTok</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 G.Sweet | Todos los derechos reservados.
+  </footer>
+
+  <!-- SCRIPT Google Sheets -->
+  <script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    fetch("https://script.google.com/macros/s/AKfycbwQBTxd7T9CmdG95VSQCMMP4JAiHTssHvVdDlGY-PitmZDzWGmvf__eLhuWF7rOA9abGw/exec", {
+        method: "POST",
+        body: new FormData(document.getElementById("bookingForm"))
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Solicitud enviada con éxito.");
+        document.getElementById("bookingForm").reset();
+    })
+    .catch(error => alert("Error al enviar: " + error));
+});
+</script>
+</body>
+</html>
